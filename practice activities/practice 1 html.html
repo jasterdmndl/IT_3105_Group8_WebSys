@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Activity 1: HTML</title>
+    <style>
+        h2 {
+            color: rgb(255, 0, 174);
+        }
+        .div1 {
+            color: rgb(98, 12, 36);
+
+        }
+        .div2 {
+            color: rgb(177, 150, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tables</h1>
+    <table border="1" style="text-align: center;">
+        <tr>
+            <th>Number</th>
+            <th>Item</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Apple</td>
+            <td rowspan="3">5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mango</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td colspan="2">Total</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <h1>Inline Elements</h1>
+    <p>This is how <span style="border: 1px solid black;">span</span> works.</p>
+    <p>The following span will be inling: <span style="border: 1px solid black;"> Span 1</span> and <span style="border: 1px solid black;"> Span 2</span>.</p>
+    <p style="border: 1px solid black">The formatting tags like <b>b</b>, <strong>strong</strong>, <em>em</em> are also inline elements.</p>
+
+    <br>
+    <hr>
+    <br>
+    <h1>Semantic Elements</h1>
+    <div class="div1">
+        <h2>This is div1 heading.</h2>
+        <p>This is a paragraph</p>
+    </div>
+    <div class="div2">
+        <h2>This is another heading for div2.</h2>
+        <p>This is another paragraph.</p>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+    <h1>Figure and Figcaption</h1>
+    <figure>
+        <img src="attachments/images.jpg"
+    alt="Trulli" style="width: 100%">
+    <figcaption>aso</figcaption>
+    </figure>
+
+</body>
+</html>
