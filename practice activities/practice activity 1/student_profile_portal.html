@@ -7,31 +7,37 @@
 </head>
 <body>
 
-    <header style="text-align: center;">
+    <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.3rem; text-align: center;">
 
-        <section>
+        <div style="width: 16rem; text-align: center; line-height: 1.1; padding: 10px; margin: 10px;">
+            <h2 style="margin: 0;">GROUP 8</h2>
+            <small style="display: block;">IT 3105</small>
+        </div>
+
+        <div style="flex: 1; min-width: 300px;text-align: center;">
             <h1>Student Profile Portal</h1>
             <p>Welcome to the student profile portal. Here you can view and manage your profile information.</p>
-        </section>  
-
-        <nav>
+        
+            <nav>
                 <a href="#">Home</a> |
                 <a href="#">Profile</a> |
                 <a href="#">Grades</a> |
                 <a href="#">Contact</a>
-        </nav>
+            </nav>
+
+        </div>  
 
           
     </header>
 
     <main>
-        <aside style="height: 14rem; width: 14rem; padding: 10px; margin: 10px; float: left !important;">
+        <aside style="height: 14rem; width: 16rem; padding: 10px; margin: 10px; float: left !important;">
             <fieldset style="padding: 10px; margin: 10px;">
                 <legend><strong>Profile Card</strong></legend>
-                <p>Name: Student Name</p>
-                <p>Email: student@example.com</p>
-                <p>Phone: 123-456-7890</p>
-                <p>Address: 123 Main Street, City</p>
+                <p><b>Name:</b> Student Name</p>
+                <p><b>Email:</b> student@example.com</p>
+                <p><b>Phone:</b> 123-456-7890</p>
+                <p><b>Address:</b> 123 Main Street, City</p>
             </fieldset>
         </aside>
         
@@ -47,13 +53,13 @@
 
         <section>
             <h2>About Me</h2>
-            <p>Helo! I'm a <em>3rd Year</em> <b><i>Information Technology</i></b> student.</p>
+            <p>Hello! I'm a <em>3rd Year</em> <b><i>Information Technology</i></b> student.</p>
             <p>Major in <strong>Business Analytics.</strong></p>
         </section>
 
         <hr>
 
-        <section id="form" style=" display: block; height: auto; width: 14rem; padding: 10px; margin: 10px;">
+        <section id="form" style="height: auto; width: 16rem; padding: 10px; margin: 10px; float: left !important;">
             <fieldset style="padding: 10px; margin: 10px;">
                 <legend><strong>Feedback Form</strong></legend>
                 <form action="#" method="POST">
