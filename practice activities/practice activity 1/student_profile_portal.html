@@ -22,14 +22,16 @@
     </header>
 
     <main>
-        <aside style="height: 14rem; width: 14rem; border: 1px solid black; padding: 10px; margin: 10px; float: left !important;">
-            <h1>Profile Card</h1>
-            <p>Name: Student Name</p>
-            <p>Email: student@example.com</p>
-            <p>Phone: 123-456-7890</p>
-            <p>Address: 123 Main Street, City</p>
+        <aside style="height: 14rem; width: 14rem; padding: 10px; margin: 10px; float: left !important;">
+            <fieldset style="padding: 10px; margin: 10px;">
+                <legend><strong>Profile Card</strong></legend>
+                <p>Name: Student Name</p>
+                <p>Email: student@example.com</p>
+                <p>Phone: 123-456-7890</p>
+                <p>Address: 123 Main Street, City</p>
+            </fieldset>
         </aside>
-
+        
         <section>
             <figure>
                 <img src="attachments/student-photo.jpg"
@@ -48,18 +50,20 @@
 
         <hr>
 
-        <section id="form" style=" display: block; width: 14rem; border: 1px solid black; padding: 10px; margin: 10px;">
-            <legend>Feedback Form</legend>
-            <form action="#" method="POST">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
+        <section id="form" style=" display: block; height: auto; width: 14rem; padding: 10px; margin: 10px;">
+            <fieldset style="padding: 10px; margin: 10px;">
+                <legend><strong>Feedback Form</strong></legend>
+                <form action="#" method="POST">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required><br>
+                    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
 
-                <label for="phone">Tel Number:</label>
-                <input type="tel" id="phone" name="phone" required><br>
-            </form>
+                    <label for="phone">Tel Number:</label>
+                    <input type="tel" id="phone" name="phone" required><br>
+                </form>
+            </fieldset>
         </section>
         
     </main>
