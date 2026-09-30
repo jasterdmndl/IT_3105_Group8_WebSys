@@ -59,19 +59,40 @@
 
         <hr>
 
-        <section id="form" style="height: auto; width: 16rem; padding: 10px; margin: 10px; float: left !important;">
+        <section id="form" style="height: auto; width: 16rem; padding: 10px; margin: 10px;">
             <fieldset style="padding: 10px; margin: 10px;">
                 <legend><strong>Feedback Form</strong></legend>
                 <form action="#" method="POST">
                     <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" required><br>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name"><br>
                     
                     <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
 
                     <label for="phone">Tel Number:</label>
-                    <input type="tel" id="phone" name="phone" required><br>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"><br>
+
+                    <label for="course">Course:</label>
+                    <select id="course" placeholder="Select your course">
+                        <optgroup label="Courses"></optgroup>
+                        <option value="it">Information Technology</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="is">Information Systems</option>
+                    </select>
+
+                    <br>
+
+                    <label for="programming_language">Programming Language:</label>
+                    <input type="text" id="programming_language" list="programming_languages" name="programming_language" required placeholder="Enter your favorite programming language"><br>
+                    <datalist id="programming_languages">
+                        <option value="Python">
+                        <option value="JavaScript">
+                        <option value="Java">
+                        <option value="C++">
+                    </datalist>
                 </form>
+                
+
             </fieldset>
         </section>
         
