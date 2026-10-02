@@ -14,7 +14,7 @@
             <small style="display: block;">IT 3105</small>
         </div>
 
-        <div style="flex: 1; min-width: 300px;text-align: center;">
+        <div style="flex: 1; min-width: 72vw;text-align: center;">
             <h1>Student Profile Portal</h1>
             <p>Welcome to the student profile portal. Here you can view and manage your profile information.</p>
         
@@ -30,10 +30,10 @@
           
     </header>
 
-    <main>
-        <aside style="height: 14rem; width: 16rem; padding: 10px; margin: 10px; float: left !important;">
-            <fieldset style="padding: 10px; margin: 10px;">
-                <legend><strong>Profile Card</strong></legend>
+    <main style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.3rem; text-align: center;">
+        <aside style="height: 14rem; width: 16rem; padding: 10px; margin: 10px; float: left !important; ">
+            <fieldset style="padding: 10px; margin: 10px; align-items: center; justify-content: center;">
+                <legend style="text-align: center;"><strong>Profile Card</strong></legend>
                 <p><b>Name:</b> Student Name</p>
                 <p><b>Email:</b> student@example.com</p>
                 <p><b>Phone:</b> 123-456-7890</p>
@@ -47,55 +47,54 @@
                      alt="Student Photo" style="width: 5rem; height: 5rem;">
                 <figcaption>Student Photo</figcaption>
             </figure>
+
+            <hr>
+
+            <section>
+                <h2>About Me</h2>
+                <p>Hello! I'm a <em>3rd Year</em> <b><i>Information Technology</i></b> student.</p>
+                <p>Major in <strong>Business Analytics.</strong></p>
+            </section>
+
+            <hr> 
+
+            <section id="form" style="height: auto; width: 70vw; padding: 10px; margin: 10px auto; align-items: center; justify-content: center; float: none;">
+                <fieldset style="padding: 10px; margin: 10px;">
+                    <legend style="text-align: center;"><strong>Feedback Form</strong></legend>
+                    <form action="#" method="POST">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name"><br>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+
+                        <label for="phone">Tel Number:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"><br>
+
+                        <label for="course">Course:</label>
+                        <select id="course" placeholder="Select your course">
+                            <optgroup label="Courses"></optgroup>
+                            <option value="it">Information Technology</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="is">Information Systems</option>
+                        </select>
+
+                        <br>
+
+                        <label for="programming_language">Programming Language:</label>
+                        <input type="text" id="programming_language" list="programming_languages" name="programming_language" required placeholder="Enter your favorite programming language"><br>
+                        <datalist id="programming_languages">
+                            <option value="Python">
+                            <option value="JavaScript">
+                            <option value="Java">
+                            <option value="C++">
+                        </datalist>
+                    </form>
+                    <p style="text-align: center;">Thank you for your feedback!</p>
+                </fieldset>
+            </section>
         </section>
-
-        <hr>
-
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I'm a <em>3rd Year</em> <b><i>Information Technology</i></b> student.</p>
-            <p>Major in <strong>Business Analytics.</strong></p>
-        </section>
-
-        <hr>
-
-        <section id="form" style="height: auto; width: 16rem; padding: 10px; margin: 10px;">
-            <fieldset style="padding: 10px; margin: 10px;">
-                <legend><strong>Feedback Form</strong></legend>
-                <form action="#" method="POST">
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name"><br>
-                    
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
-
-                    <label for="phone">Tel Number:</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"><br>
-
-                    <label for="course">Course:</label>
-                    <select id="course" placeholder="Select your course">
-                        <optgroup label="Courses"></optgroup>
-                        <option value="it">Information Technology</option>
-                        <option value="cs">Computer Science</option>
-                        <option value="is">Information Systems</option>
-                    </select>
-
-                    <br>
-
-                    <label for="programming_language">Programming Language:</label>
-                    <input type="text" id="programming_language" list="programming_languages" name="programming_language" required placeholder="Enter your favorite programming language"><br>
-                    <datalist id="programming_languages">
-                        <option value="Python">
-                        <option value="JavaScript">
-                        <option value="Java">
-                        <option value="C++">
-                    </datalist>
-                </form>
-                
-
-            </fieldset>
-        </section>
-        
+    
     </main>
 
 
