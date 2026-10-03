@@ -1,0 +1,33 @@
+:root {
+    --navy: #173454;
+    --blue: #245D93;
+    --text: #24364A;
+    --muted: #526477;
+    --background: #F3F6FA;
+    --white: #FFFFFF;
+    --border: #C5D0DC;
+
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 1.5rem;
+    --space-section: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+input,
+select,
+button {
+    font: inherit;
+}

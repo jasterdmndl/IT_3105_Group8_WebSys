@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.3rem; text-align: center;">
+
+        <div style="width: 16rem; text-align: center; line-height: 1.1; padding: 10px; margin: 10px;">
+            <h2 style="margin: 0;">GROUP 8</h2>
+            <small style="display: block;">IT 3105</small>
+        </div>
+
+        <div style="flex: 1; min-width: 72vw; text-align: center;">
+            <h1>Student Profile Portal</h1>
+            <p>Welcome to the student profile portal. Here you can view and manage your profile information.</p>
+        
+            <nav>
+                <a href="#">Home</a> |
+                <a href="#">Profile</a> |
+                <a href="#">Grades</a> |
+                <a href="#">Contact</a>
+            </nav>
+
+        </div>  
+
+          
+    </header>
+
+    <main style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.3rem; text-align: center;">
+        <aside style="height: 24rem; width: 16rem; text-align:center; padding: 10px; margin: 10px; margin-top: 9rem; align-self: flex-start;">
+            <fieldset style="padding: 10px; margin: 10px; align-items: center; justify-content: center;"> 
+                <legend style="text-align: center;"><strong>Profile Card</strong></legend>
+                <p><b>Name:</b> Taylor Swift</p>
+                <p><b>Email:</b> taylor@example.com</p>
+                <p><b>Phone:</b> 123-456-7890</p>
+                <p><b>Address:</b> 23 Cornelia Street</p>
+            </fieldset>
+        </aside>
+        
+        <div style="flex: 1; min-width: 72vw;text-align: center;">
+            <figure>
+                <img src="attachments/student-photo.jpg"
+                     alt="Student Photo" style="width: 5rem; height: 5rem;">
+                <figcaption>So make the friendship bracelets, take the moment and taste it. — "You're on Your Own, Kid"</figcaption>
+            </figure>
+
+            <hr>
+
+            <section>
+                <h2>About Me</h2>
+                <p>Hello! I'm a <em>3rd Year</em> Bachelor of Science in <b><i>Information Technology</i></b> student.</p>
+                <p>Major in <strong>Business Analytics.</strong></p>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Academic Record</h2>
+                <table border="1" style="margin: 10px auto; border-collapse: collapse; width: 70vw;">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Subject</th>
+                            <th>Semester</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">Taylor Swift</td>
+                            <td>IT 314</td>
+                            <td>1st Sem</td>
+                            <td>1.00</td>
+                        </tr>
+                        <tr>
+                            <td>BAT 401</td>
+                            <td>1st Sem</td>
+                            <td>1.50</td>
+                        </tr>
+                        <tr>
+                            <td>IT 313</td>
+                            <td>1st Sem</td>
+                            <td>1.25</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" style="text-align: left; font-weight: bold;">Schedule: Mon-Fri | 8:00 AM - 12:00 NN</td>
+                            <td colspan="2" style="text-align: center; font-weight: bold;">Total Units: 18</td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="4" style="text-align: center; font-weight: bold;">End of 1st Semester Academic Record</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <hr>
+
+            <section id="form" style="height: auto; width: 70vw; padding: 10px; margin: 10px auto; align-items: center; justify-content: center; float: none;">
+                <fieldset style="padding: 10px; margin: 10px;">
+                    <legend style="text-align: center;"><strong>Feedback Form</strong></legend>
+                    <form action="#" method="POST" style="text-align: left;">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name"><br>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+
+                        <label for="phone">Tel Number:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"><br>
+
+                        <label for="course">Course:</label>
+                        <select id="course" placeholder="Select your course">
+                            <optgroup label="Courses"></optgroup>
+                            <option value="it">Information Technology</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="is">Information Systems</option>
+                        </select>
+
+                        <br>
+
+                        <label for="programming_language">Programming Language:</label>
+                        <input type="text" id="programming_language" list="programming_languages" name="programming_language" required placeholder="Enter your favorite programming language"><br>
+                        <datalist id="programming_languages">
+                            <option value="Python">
+                            <option value="JavaScript">
+                            <option value="Java">
+                            <option value="C++">
+                        </datalist>
+
+                        <fieldset style="margin-top: 1rem; text-align: left;">
+                            <legend>Elective Choices</legend>
+                            <label><input type="checkbox" name="electives" value="web-dev"> Web Development</label><br>
+                            <label><input type="checkbox" name="electives" value="data-science"> Data Analyst</label><br>
+                            <label><input type="checkbox" name="electives" value="networking"> Networking</label><br>
+                            <label><input type="checkbox" name="electives" value="cybersecurity"> Cybersecurity</label>
+                        </fieldset>
+                        <br>
+                        <label for="upload">Upload:</label><br>
+                        <input type="file" id="upload" name="upload" accept=".pdf,.doc,.docx,image/*"><br>
+                        <br>
+                        <button type="submit">Submit</button>
+                        <br>
+                        <button type="reset">Reset</button>
+                    </form>
+                    <p style="text-align: center;">Thank you for your feedback!</p>
+                </fieldset>
+            </section>
+        </div>
+    
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</body>
+</html>
