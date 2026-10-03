@@ -262,7 +262,8 @@ header nav a:focus-visible {
     border-top: 1px solid var(--border);
 }
 
-.about-me h2 {
+.about-me h2,
+.academic-record h2 {
     margin: 0 0 var(--space-medium);
     color: var(--navy);
     font-size: 1.5rem;
@@ -277,6 +278,65 @@ header nav a:focus-visible {
 
 .about-me p + p {
     margin-top: var(--space-small);
+}
+
+.academic-record table {
+    margin: 0;
+    border-collapse: collapse;
+    background-color: var(--white);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.academic-record th,
+.academic-record td {
+    padding: 0.75rem var(--space-small);
+    border: 1px solid var(--border);
+    text-align: left;
+    line-height: 1.5;
+}
+
+.academic-record th {
+    background-color: var(--navy);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.academic-record td[rowspan] {
+    vertical-align: top;
+    font-weight: 600;
+}
+
+.academic-record th:nth-child(n + 3),
+.academic-record td:nth-last-child(-n + 2):not([colspan]):not([rowspan]) {
+    text-align: center;
+}
+
+.academic-record td[colspan] {
+    background-color: var(--background);
+    font-weight: 600;
+}
+
+.academic-record .record-units,
+.academic-record .record-end {
+    text-align: center;
+}
+
+.academic-record .record-end {
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+@media (max-width: 480px) {
+    .academic-record table {
+        font-size: 0.875rem;
+    }
+
+    .academic-record th,
+    .academic-record td {
+        padding: 0.6rem 0.35rem;
+    }
 }
 
 @media (max-width: 480px) {
