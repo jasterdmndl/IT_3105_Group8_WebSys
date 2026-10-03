@@ -1,3 +1,4 @@
+/* 1. Shared palette and spacing: change these values to customize the page. */
 :root {
     --navy: #173454;
     --blue: #245D93;
@@ -13,6 +14,7 @@
     --space-section: 2rem;
 }
 
+/* 2. Page defaults. Padding and borders count toward element widths. */
 * {
     box-sizing: border-box;
 }
@@ -32,6 +34,7 @@ button {
     font: inherit;
 }
 
+/* 3. Header. Its columns align with the main layout below. */
 header {
     padding: var(--space-section) 0;
     background-color: var(--navy);
@@ -77,6 +80,7 @@ header {
     line-height: 1.2;
 }
 
+/* 4. Main layout and profile details. */
 main {
     display: grid;
     grid-template-columns: 15rem minmax(0, 1fr);
@@ -309,6 +313,7 @@ header nav a:focus-visible {
 }
 
 .academic-record th:nth-child(n + 3),
+/* Merged name cells change the cell count, so count from the row's end. */
 .academic-record td:nth-last-child(-n + 2):not([colspan]):not([rowspan]) {
     text-align: center;
 }
@@ -319,7 +324,7 @@ header nav a:focus-visible {
 }
 
 .academic-record .record-units,
-.academic-record .record-end {
+.academic-record td.record-end {
     text-align: center;
 }
 
@@ -352,6 +357,7 @@ header nav a:focus-visible {
     }
 }
 
+/* 5. Registration form. The title sits within the fieldset border. */
 #form > fieldset {
     margin: 0;
     padding: var(--space-large);
@@ -368,6 +374,7 @@ header nav a:focus-visible {
     text-align: left;
 }
 
+/* Replace the HTML line breaks with consistent label and field spacing. */
 #form br {
     display: none;
 }
@@ -485,5 +492,73 @@ header nav a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
     #form button {
         transition: none;
+    }
+}
+
+/* Give form fields more room on phones without changing the outer margins. */
+@media (max-width: 480px) {
+    #form > fieldset {
+        padding: var(--space-medium);
+    }
+}
+
+/* 6. Footer: credits and one repository link, aligned with the page. */
+footer {
+    margin-top: var(--space-section);
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-large);
+    margin: 0 10%;
+    padding: var(--space-large) 0;
+    overflow-wrap: anywhere;
+}
+
+.footer-credits {
+    min-width: 0;
+}
+
+.footer-credits p {
+    margin: 0;
+}
+
+.footer-credits p + p {
+    margin-top: 0.25rem;
+}
+
+footer a {
+    min-width: 0;
+    padding: var(--space-small) 0;
+    color: var(--blue);
+    text-underline-offset: 0.25em;
+}
+
+footer a:hover {
+    color: var(--navy);
+    text-decoration-thickness: 2px;
+}
+
+footer a:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-small);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-inner {
+        margin: 0 var(--space-medium);
     }
 }
