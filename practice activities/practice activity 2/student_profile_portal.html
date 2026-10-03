@@ -124,10 +124,10 @@
 
             <hr>
 
-            <section id="form" style="height: auto; padding: 10px; margin: 10px auto; align-items: center; justify-content: center; float: none;">
-                <fieldset style="padding: 10px; margin: 10px;">
-                    <legend style="text-align: center;"><strong>Registration Form</strong></legend>
-                    <form action="#" method="POST" style="text-align: left;">
+            <section id="form">
+                <fieldset>
+                    <legend><strong>Registration Form</strong></legend>
+                    <form action="#" method="POST">
                         <label for="fullName">Full Name:</label>
                         <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name"><br>
                         
@@ -156,7 +156,7 @@
                             <option value="C++">
                         </datalist>
 
-                        <fieldset style="margin-top: 1rem; text-align: left;">
+                        <fieldset>
                             <legend>Elective Choices</legend>
                             <label><input type="checkbox" name="electives" value="web-dev"> Web Development</label><br>
                             <label><input type="checkbox" name="electives" value="data-science"> Data Analyst</label><br>
@@ -167,9 +167,10 @@
                         <label for="upload">Upload:</label><br>
                         <input type="file" id="upload" name="upload" accept=".pdf,.doc,.docx,image/*"><br>
                         <br>
-                        <button type="submit">Submit</button>
-                        <br>
-                        <button type="reset">Reset</button>
+                        <div class="form-actions">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </div>
                     </form>
                 </fieldset>
             </section>

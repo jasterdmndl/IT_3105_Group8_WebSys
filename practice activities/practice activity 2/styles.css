@@ -263,7 +263,8 @@ header nav a:focus-visible {
 }
 
 .about-me h2,
-.academic-record h2 {
+.academic-record h2,
+#form > fieldset > legend {
     margin: 0 0 var(--space-medium);
     color: var(--navy);
     font-size: 1.5rem;
@@ -348,5 +349,141 @@ header nav a:focus-visible {
 
     .main-content > hr {
         margin: var(--space-large) 0;
+    }
+}
+
+#form > fieldset {
+    margin: 0;
+    padding: var(--space-large);
+    border: 1px solid var(--border);
+    background-color: var(--white);
+}
+
+#form > fieldset > legend {
+    max-width: 100%;
+    padding: 0 var(--space-small);
+}
+
+#form form {
+    text-align: left;
+}
+
+#form br {
+    display: none;
+}
+
+#form form > label {
+    display: block;
+    margin: var(--space-large) 0 var(--space-small);
+    font-weight: 600;
+}
+
+#form form > label:first-child {
+    margin-top: 0;
+}
+
+#form input:not([type="checkbox"]),
+#form select {
+    display: block;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--muted);
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--text);
+}
+
+#form input::placeholder {
+    color: var(--muted);
+    opacity: 1;
+}
+
+#form form > fieldset {
+    margin: var(--space-large) 0 0;
+    padding: var(--space-medium);
+    border: 1px solid var(--border);
+}
+
+#form form > fieldset > legend {
+    max-width: 100%;
+    padding: 0 var(--space-small);
+    color: var(--navy);
+    font-weight: 600;
+}
+
+#form form > fieldset label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-small);
+    min-height: 2.75rem;
+    cursor: pointer;
+}
+
+#form input[type="checkbox"] {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: var(--blue);
+}
+
+#form input[type="file"] {
+    font-size: 0.9rem;
+}
+
+#form input::file-selector-button {
+    margin-right: var(--space-small);
+    padding: 0.4rem var(--space-small);
+    border: 1px solid var(--muted);
+    border-radius: 3px;
+    background-color: var(--background);
+    color: var(--navy);
+    font: inherit;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-medium);
+    margin-top: var(--space-large);
+}
+
+#form button {
+    min-height: 2.75rem;
+    padding: 0.65rem var(--space-large);
+    border: 1px solid var(--navy);
+    border-radius: 4px;
+    background-color: var(--navy);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 150ms ease;
+}
+
+#form button:hover {
+    background-color: var(--blue);
+}
+
+#form button[type="reset"] {
+    background-color: var(--white);
+    color: var(--navy);
+}
+
+#form button[type="reset"]:hover {
+    background-color: var(--background);
+}
+
+#form input:focus-visible,
+#form select:focus-visible,
+#form button:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #form button {
+        transition: none;
     }
 }
