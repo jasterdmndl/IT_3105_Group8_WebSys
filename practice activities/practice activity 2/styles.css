@@ -19,6 +19,11 @@
     box-sizing: border-box;
 }
 
+/* Animate jumps to page anchors without JavaScript. */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: var(--background);
@@ -313,7 +318,6 @@ header nav a:focus-visible {
 }
 
 .academic-record th:nth-child(n + 3),
-/* Merged name cells change the cell count, so count from the row's end. */
 .academic-record td:nth-last-child(-n + 2):not([colspan]):not([rowspan]) {
     text-align: center;
 }
@@ -357,7 +361,6 @@ header nav a:focus-visible {
     }
 }
 
-/* 5. Registration form. The title sits within the fieldset border. */
 #form > fieldset {
     margin: 0;
     padding: var(--space-large);
@@ -374,7 +377,6 @@ header nav a:focus-visible {
     text-align: left;
 }
 
-/* Replace the HTML line breaks with consistent label and field spacing. */
 #form br {
     display: none;
 }
@@ -490,19 +492,21 @@ header nav a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     #form button {
         transition: none;
     }
 }
 
-/* Give form fields more room on phones without changing the outer margins. */
 @media (max-width: 480px) {
     #form > fieldset {
         padding: var(--space-medium);
     }
 }
 
-/* 6. Footer: credits and one repository link, aligned with the page. */
 footer {
     margin-top: var(--space-section);
     border-top: 1px solid var(--border);
@@ -547,6 +551,29 @@ footer a:hover {
 footer a:focus-visible {
     outline: 3px solid var(--blue);
     outline-offset: 3px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-medium);
+    min-width: 0;
+}
+
+footer .back-to-top {
+    display: inline-block;
+    padding: 0.65rem var(--space-medium);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+footer .back-to-top:hover {
+    background-color: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
 }
 
 @media (max-width: 800px) {

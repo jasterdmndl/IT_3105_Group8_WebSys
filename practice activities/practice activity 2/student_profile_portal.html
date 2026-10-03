@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="top">
         <div class="header-inner">
 
         <div class="header-group">
@@ -22,9 +22,9 @@
         
             <nav>
                 <a href="#">Home</a> |
-                <a href="#">Profile</a> |
-                <a href="#">Grades</a> |
-                <a href="#">Contact</a>
+                <a href="#profile">Profile</a> |
+                <a href="#academic-record">Grades</a> |
+                <a href="#contact">Contact</a>
             </nav>
 
         </div>  
@@ -33,7 +33,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="profile">
         <aside class="profile-card">
             <fieldset> 
                 <legend><strong>Profile Card</strong></legend>
@@ -61,7 +61,7 @@
 
             <hr>
 
-            <section class="academic-record">
+            <section class="academic-record" id="academic-record">
                 <h2>Academic Record</h2>
                 <table>
                     <thead>
@@ -178,13 +178,16 @@
     
     </main>
 
-    <footer>
+    <footer id="contact">
         <div class="footer-inner">
             <div class="footer-credits">
                 <p>&copy; 2026 Student Profile Portal. All rights reserved.</p>
                 <p>Created by Bernal, Dimaandal, Mercado</p>
             </div>
-            <a href="https://github.com/jasterdmndl/IT_3105_Group8_WebSys">View our GitHub repository</a>
+            <div class="footer-links">
+                <a href="https://github.com/jasterdmndl/IT_3105_Group8_WebSys">View our GitHub repository</a>
+                <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+            </div>
         </div>
     </footer>
 
