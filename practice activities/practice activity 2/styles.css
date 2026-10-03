@@ -346,6 +346,13 @@ main {
     font-weight: 600;
 }
 
+/* Center column headings and subject data, including the merged name cell.
+   Summary cells keep their separate alignment rules below. */
+.academic-record th,
+.academic-record td:not([colspan]) {
+    text-align: center;
+}
+
 .academic-record td[rowspan] {
     vertical-align: top;
     font-weight: 600;
