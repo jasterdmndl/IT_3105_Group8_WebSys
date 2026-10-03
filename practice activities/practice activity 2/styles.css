@@ -184,11 +184,25 @@ main {
     margin: var(--space-medium) 0 0;
 }
 
-header nav {
-    margin-top: var(--space-large);
+/* Navigation alone sticks; the header above it scrolls away. */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--navy);
+    color: var(--white);
+    border-top: 1px solid var(--border);
 }
 
-header nav a {
+.nav-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-small);
+    margin: 0 10%;
+    padding: 0.25rem 0;
+}
+
+.site-nav a {
     display: inline-block;
     padding: 0.6rem var(--space-small);
     color: var(--white);
@@ -197,13 +211,33 @@ header nav a {
     text-underline-offset: 0.25em;
 }
 
-header nav a:hover {
+.site-nav a:hover {
     background-color: var(--blue);
 }
 
-header nav a:focus-visible {
+.site-nav a:focus-visible {
     outline: 2px solid var(--white);
     outline-offset: 3px;
+}
+
+/* Leave room for the navigation when following an anchor link. */
+#top,
+#profile,
+#academic-record,
+#contact {
+    scroll-margin-top: 5rem;
+}
+
+@media (max-width: 480px) {
+    .nav-inner {
+        margin: 0 var(--space-medium);
+        gap: 0.25rem;
+    }
+
+    .site-nav a {
+        padding: 0.65rem 0.25rem;
+        font-size: 0.875rem;
+    }
 }
 
 @media (max-width: 800px) {
