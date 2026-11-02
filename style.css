@@ -40,6 +40,33 @@ header p {
     margin: 0 auto;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    header h1,
+    header p {
+        animation: header-reveal 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    header h1 {
+        animation-delay: 200ms;
+    }
+
+    header p {
+        animation-delay: 700ms;
+        animation-duration: 700ms;
+    }
+}
+
+@keyframes header-reveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+        transform: translateX(-8px);
+    }
+    to {
+        clip-path: inset(0);
+        transform: translateX(0);
+    }
+}
+
 /* Main Container */
 main {
     max-width: 800px;
@@ -65,6 +92,7 @@ main {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
     margin-bottom: 2.5rem;
     overflow: hidden;
+    overflow: clip;
 }
 
 .activity-list li {
@@ -90,6 +118,88 @@ main {
 .activity-info p {
     color: var(--text-muted);
     font-size: 0.9rem;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+        .activity-list li {
+            animation: activity-reveal 1ms linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 100%;
+        }
+    }
+}
+
+@keyframes activity-reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0);
+    }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .activity-list .activity-info strong,
+    .activity-list .activity-info p {
+        width: fit-content;
+        position: relative;
+    }
+
+    .activity-list .btn {
+        position: relative;
+    }
+
+    .activity-list .activity-info strong::before,
+    .activity-list .activity-info p::before,
+    .activity-list .btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        border-radius: 4px;
+        background-color: var(--card-bg);
+        background-image:
+            linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent),
+            linear-gradient(var(--border-color), var(--border-color));
+        background-repeat: no-repeat;
+        background-position: -8rem 0, 0 50%;
+        animation: skeleton-shimmer 1100ms ease-in-out 1 both, skeleton-out 1400ms ease both;
+    }
+
+    .activity-list .activity-info strong::before {
+        background-size: 8rem 100%, 100% 14px;
+    }
+
+    .activity-list .activity-info p::before {
+        background-size: 8rem 100%, 100% 10px;
+    }
+
+    .activity-list .btn::before {
+        background-color: var(--border-color);
+        background-size: 8rem 100%, 100% 100%;
+    }
+}
+
+@keyframes skeleton-shimmer {
+    from {
+        background-position: -8rem 0, 0 50%;
+    }
+    to {
+        background-position: calc(100% + 8rem) 0, 0 50%;
+    }
+}
+
+@keyframes skeleton-out {
+    0%, 75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 /* Buttons */
