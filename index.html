@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Activity Repository</title>
+    <script>
+        try {
+            if (localStorage.getItem("theme") === "dark") {
+                document.documentElement.dataset.theme = "dark";
+            }
+        } catch (error) {}
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="sky" aria-hidden="true">
+        <svg class="sky-defs" width="0" height="0" focusable="false">
+            <symbol id="pixel-cloud" viewBox="0 0 10 6" shape-rendering="crispEdges">
+                <rect x="2" y="0" width="3" height="1"></rect>
+                <rect x="6" y="0" width="2" height="1"></rect>
+                <rect x="1" y="1" width="8" height="1"></rect>
+                <rect x="0" y="2" width="10" height="3"></rect>
+                <rect x="1" y="5" width="8" height="1"></rect>
+            </symbol>
+        </svg>
+        <svg class="sky-cloud" viewBox="0 0 10 6" shape-rendering="crispEdges" style="--top:70px; --w:150px; --dur:70s; --delay:-10.5s; --opacity:0.95;"><use href="#pixel-cloud"></use></svg>
+        <svg class="sky-cloud" viewBox="0 0 10 6" shape-rendering="crispEdges" style="--top:190px; --w:90px; --dur:95s; --delay:-52.3s; --opacity:0.8;"><use href="#pixel-cloud"></use></svg>
+        <svg class="sky-cloud" viewBox="0 0 10 6" shape-rendering="crispEdges" style="--top:320px; --w:220px; --dur:60s; --delay:-49.2s; --opacity:0.9;"><use href="#pixel-cloud"></use></svg>
+        <svg class="sky-cloud" viewBox="0 0 10 6" shape-rendering="crispEdges" style="--top:450px; --w:70px; --dur:110s; --delay:-33s; --opacity:0.7;"><use href="#pixel-cloud"></use></svg>
+        <svg class="sky-cloud" viewBox="0 0 10 6" shape-rendering="crispEdges" style="--top:560px; --w:120px; --dur:80s; --delay:-54.4s; --opacity:0.85;"><use href="#pixel-cloud"></use></svg>
+        <svg class="sky-cloud" viewBox="0 0 10 6" shape-rendering="crispEdges" style="--top:610px; --w:100px; --dur:88s; --delay:-37s; --opacity:0.8;"><use href="#pixel-cloud"></use></svg>
+        <svg class="sky-moon" viewBox="0 0 10 10" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+            <rect x="3" y="1" width="4" height="1"></rect>
+            <rect x="2" y="2" width="6" height="1"></rect>
+            <rect x="1" y="3" width="8" height="5"></rect>
+            <rect x="2" y="8" width="6" height="1"></rect>
+            <rect x="3" y="9" width="4" height="1"></rect>
+            <rect class="sky-moon-crater" x="3" y="4" width="2" height="2"></rect>
+            <rect class="sky-moon-crater" x="6" y="7" width="1" height="1"></rect>
+        </svg>
+    </div>
+
     <!-- Banner Header -->
     <header>
+        <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode" hidden>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+            </svg>
+        </button>
         <h1>Group 8 - IT 3105</h1>
         <p>Jasmin Bernal • Jhester Dimaandal • Kherle Mercado</p>
     </header>
@@ -80,6 +123,27 @@
 
     
     </main>
+
+    <script>
+        (() => {
+            const root = document.documentElement;
+            const toggle = document.querySelector(".theme-toggle");
+            const sync = () => {
+                const dark = root.dataset.theme === "dark";
+                toggle.setAttribute("aria-checked", String(dark));
+                toggle.hidden = false;
+            };
+            toggle.addEventListener("click", () => {
+                const dark = root.dataset.theme !== "dark";
+                root.dataset.theme = dark ? "dark" : "light";
+                try {
+                    localStorage.setItem("theme", dark ? "dark" : "light");
+                } catch (error) {}
+                sync();
+            });
+            sync();
+        })();
+    </script>
 
 </body>
 </html>
