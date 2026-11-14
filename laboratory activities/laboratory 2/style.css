@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    border: 2px solid black;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(194, 216, 233);
+}
+
+div h1 {
+    text-align: center;
+    margin: 0;
+}
+
+div button {
+    background-color: rgba(176, 211, 244, 0.958);
+    color: rgb(72, 43, 48);
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
